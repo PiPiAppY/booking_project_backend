@@ -8,7 +8,9 @@ const { Pool } = require('pg');
 
 const app = express();
 const cors = require('cors');
-app.use(cors()); // разрешает все запросы с любых источников (для разработки)
+app.use(cors({
+    origin: 'https://charming-tanuki-2e5118.netlify.app'  // ваш URL от Netlify
+})); // разрешает все запросы с любых источников (для разработки)
 
 // Используем переменные окружения для подключения к БД
 const pool = new Pool({
