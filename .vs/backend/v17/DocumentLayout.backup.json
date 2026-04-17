@@ -6,6 +6,10 @@
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\booking_project\\frontend\\src\\App.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\booking_project\\backend\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\booking_project\\frontend\\src\\components\\Register.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
@@ -16,10 +20,6 @@
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\booking_project\\frontend\\src\\api.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\booking_project\\backend\\index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\booking_project\\frontend\\src\\components\\BookingForm.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
@@ -51,17 +51,16 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
               "Title": "index.js",
               "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\booking_project\\backend\\index.js",
               "RelativeDocumentMoniker": "index.js",
               "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\booking_project\\backend\\index.js",
               "RelativeToolTip": "index.js",
-              "ViewState": "AgIAACAAAAAAAAAAAAAAwAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwCMAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2026-03-27T13:56:02.488Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
@@ -71,14 +70,14 @@
               "RelativeDocumentMoniker": "..\\frontend\\src\\App.jsx",
               "ToolTip": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\booking_project\\frontend\\src\\App.jsx",
               "RelativeToolTip": "..\\frontend\\src\\App.jsx",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAIwCQAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAIwCMAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
               "WhenOpened": "2026-04-15T22:36:05.64Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Navbar.jsx",
               "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\booking_project\\frontend\\src\\components\\Navbar.jsx",
               "RelativeDocumentMoniker": "..\\frontend\\src\\components\\Navbar.jsx",
@@ -86,12 +85,11 @@
               "RelativeToolTip": "..\\frontend\\src\\components\\Navbar.jsx",
               "ViewState": "AgIAAAUAAAAAAAAAAAAiwB0AAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-04-15T22:35:44.271Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T22:35:44.271Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "BookingsList.jsx",
               "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\booking_project\\frontend\\src\\components\\BookingsList.jsx",
               "RelativeDocumentMoniker": "..\\frontend\\src\\components\\BookingsList.jsx",
@@ -99,8 +97,7 @@
               "RelativeToolTip": "..\\frontend\\src\\components\\BookingsList.jsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-04-15T22:35:22.637Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T22:35:22.637Z"
             },
             {
               "$type": "Document",
@@ -112,12 +109,11 @@
               "RelativeToolTip": "..\\frontend\\src\\components\\BookingForm.jsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADsAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-04-15T22:34:55.811Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T22:34:55.811Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Register.jsx",
               "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\booking_project\\frontend\\src\\components\\Register.jsx",
               "RelativeDocumentMoniker": "..\\frontend\\src\\components\\Register.jsx",
@@ -125,8 +121,7 @@
               "RelativeToolTip": "..\\frontend\\src\\components\\Register.jsx",
               "ViewState": "AgIAAAcAAAAAAAAAAAAQwCUAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-04-15T22:33:42.447Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T22:33:42.447Z"
             },
             {
               "$type": "Document",
@@ -138,12 +133,11 @@
               "RelativeToolTip": "..\\frontend\\src\\components\\ResourcesList.jsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACcAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2026-04-15T22:34:26.994Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T22:34:26.994Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "api.js",
               "DocumentMoniker": "C:\\Users\\\u0410\u0440\u0442\u0451\u043C\\Desktop\\booking_project\\frontend\\src\\api.js",
               "RelativeDocumentMoniker": "..\\frontend\\src\\api.js",
@@ -151,8 +145,7 @@
               "RelativeToolTip": "..\\frontend\\src\\api.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2026-04-15T22:32:13.042Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-15T22:32:13.042Z"
             },
             {
               "$type": "Document",
