@@ -55,79 +55,61 @@ function requireAdmin(req, res, next) {
 //});
 
 // Регистрация
+// registration
 app.post('/api/auth/register', async (req, res) => {
-    const { email, password } = req.body;
+    const { full_name, email, password } = req.body;
 
-    // Простая валидация
-    if (!email || !password) {
-        return res.status(400).json({ error: 'Email и пароль обязательны' });
+    if (!full_name || !email || !password) {
+        return res.status(400).json({ error: 'All fields are required' });
     }
 
     try {
-        // Проверяем, существует ли пользователь с таким email
-        const existing = await pool.query('SELECT id FROM users WHERE email = $1', [email]);
-        if (existing.rows.length > 0) {
-            return res.status(400).json({ error: 'Пользователь с таким email уже существует' });
-        }
-
-        // Хешируем пароль
-        const saltRounds = 10;
-        const hashedPassword = await bcrypt.hash(password, saltRounds);
-
-        // Создаём пользователя (по умолчанию is_admin = false)
+        const hashedPassword = await bcrypt.hash(password, 10);
         const result = await pool.query(
-            'INSERT INTO users (email, password, is_admin) VALUES ($1, $2, $3) RETURNING id, email, is_admin',
-            [email, hashedPassword, false]
+            'INSERT INTO users (full_name, email, password, is_admin) VALUES ($1, $2, $3, $4) RETURNING id, full_name, email, is_admin',
+            [full_name, email, hashedPassword, false]
         );
 
-        const user = result.rows[0];
-        // Генерируем JWT токен
         const token = jwt.sign(
-            { userId: user.id, isAdmin: user.is_admin },
+            { userId: result.rows[0].id, isAdmin: result.rows[0].is_admin },
             process.env.JWT_SECRET,
             { expiresIn: '7d' }
         );
 
-        res.status(201).json({ token, user: { id: user.id, email: user.email, isAdmin: user.is_admin } });
+        res.status(201).json({ token, user: result.rows[0] });
     } catch (err) {
         console.error(err);
-        res.status(500).json({ error: 'Ошибка при регистрации' });
+        res.status(500).json({ error: 'Registration error' });
     }
 });
-
 // Вход
 app.post('/api/auth/login', async (req, res) => {
     const { email, password } = req.body;
-
-    if (!email || !password) {
-        return res.status(400).json({ error: 'Email и пароль обязательны' });
-    }
-
     try {
-        const result = await pool.query('SELECT id, email, password, is_admin FROM users WHERE email = $1', [email]);
+        const result = await pool.query(
+            'SELECT id, full_name, email, password, is_admin FROM users WHERE email = $1',
+            [email]
+        );
+        if (result.rows.length === 0) {
+            return res.status(401).json({ error: 'Invalid credentials' });
+        }
+
         const user = result.rows[0];
-
-        if (!user) {
-            return res.status(401).json({ error: 'Неверный email или пароль' });
+        const valid = await bcrypt.compare(password, user.password);
+        if (!valid) {
+            return res.status(401).json({ error: 'Invalid credentials' });
         }
 
-        // Сравниваем введённый пароль с хешем из базы
-        const validPassword = await bcrypt.compare(password, user.password);
-        if (!validPassword) {
-            return res.status(401).json({ error: 'Неверный email или пароль' });
-        }
-
-        // Генерируем токен
         const token = jwt.sign(
             { userId: user.id, isAdmin: user.is_admin },
             process.env.JWT_SECRET,
             { expiresIn: '7d' }
         );
 
-        res.json({ token, user: { id: user.id, email: user.email, isAdmin: user.is_admin } });
+        res.json({ token, user });
     } catch (err) {
         console.error(err);
-        res.status(500).json({ error: 'Ошибка при входе' });
+        res.status(500).json({ error: 'Login error' });
     }
 });
 //запрос на список ресурсов
